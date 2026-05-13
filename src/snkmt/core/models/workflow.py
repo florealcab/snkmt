@@ -50,7 +50,7 @@ class Workflow(Base):
         cascade="all, delete-orphan",
         lazy="selectin",
     )
-    slurm_group_id: Mapped[Optional[str]]  # UUID SLURM du run
+    cluster_group_id: Mapped[Optional[str]]  # UUID SLURM du run
 
     @classmethod
     def get_updated_since(
